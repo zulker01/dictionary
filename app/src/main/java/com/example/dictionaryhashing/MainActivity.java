@@ -7,18 +7,60 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     String s1[]={"Muri","Rater","Vora"},s2[]={"khao","Akash","tara"};
     RecyclerView recyclerView;
+    ArrayList<String> numberlist = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*String json;
+        try{
 
+            InputStream is = getAssets().open("example_1.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+
+
+            json = new String (buffer,"UTF-8");
+           // int len = jsonArray.length();
+            int len = 10;
+
+            JSONArray jsonArray = new JSONArray(json);
+            for(int i=0;i<jsonArray.length();i++){
+                JSONObject obj =  jsonArray.getJSONObject(i);
+                System.out.println(obj.getString("fruit"));
+
+                Toast.makeText(getApplicationContext(),"successful "+obj.getString("fruit"),Toast.LENGTH_LONG).show();
+            }
+            Toast.makeText(getApplicationContext(),"successful "+size,Toast.LENGTH_LONG).show();
+
+        }
+        catch(FileNotFoundException e) {e.printStackTrace(); }
+        catch (IOException e) {e.printStackTrace(); }
+        //catch(ParseException e) {e.printStackTrace(); }
+        catch(Exception e) {e.printStackTrace(); }
+
+
+        Toast.makeText(getApplicationContext(),"not successful ",Toast.LENGTH_LONG).show();
+        
+         */
         recyclerView = findViewById(R.id.recyclerView);
         MyAdapter myAdapter = new MyAdapter(this,s1,s2);
         recyclerView.setAdapter(myAdapter);
