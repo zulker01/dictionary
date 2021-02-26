@@ -20,16 +20,25 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    String s1[]={"Muri","Rater","Vora"},s2[]={"khao","Akash","tara"};
+    ArrayList<String> s1 = new ArrayList<>();
+
+    ArrayList<String> s2 = new ArrayList<>();
+
+
+
+    //String s1[]={"Muri","Rater","Vora"},s2[]={"khao","Akash","tara"};
     RecyclerView recyclerView;
     ArrayList<String> numberlist = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         /*String json;
         try{
 
@@ -83,10 +92,10 @@ public class MainActivity extends AppCompatActivity {
                     int wordEnd = data.indexOf("|");
                     String word = data.substring(wordStart,wordEnd);
                     String banglaWord = data.substring(wordEnd+1,data.length());
+                    s1.add(word);
+                    s2.add(banglaWord);
+                    //sbuffer.append(word + "\n"+banglaWord+"\n");
 
-                    sbuffer.append(word + "\n"+banglaWord+"\n");
-                    i++;
-                    if(i>10) break;
                     is.close();
                 }
 
@@ -95,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         System.out.print(sbuffer);
-                Toast.makeText(getApplicationContext(),"not successful "+sbuffer,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext()," successful "+sbuffer,Toast.LENGTH_LONG).show();
                 recyclerView = findViewById(R.id.recyclerView);
         MyAdapter myAdapter = new MyAdapter(this,s1,s2);
         recyclerView.setAdapter(myAdapter);

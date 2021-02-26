@@ -9,12 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
 
-    String data1[],data2[];
+    ArrayList<String> data1 = new ArrayList<>();
+    ArrayList<String> data2 = new ArrayList<>();
     Context context;
-    public MyAdapter(Context ct,String s1[], String s2[])
+    public MyAdapter(Context ct,ArrayList<String>  s1, ArrayList<String>  s2)
     {
         context = ct;
         data1 = s1;
@@ -31,13 +34,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.word.setText(data1[position]);
-        holder.meaning.setText(data2[position]);
+        holder.word.setText(data1.get(position));
+        holder.meaning.setText(data2.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return data1.length;
+        return data1.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder  {
