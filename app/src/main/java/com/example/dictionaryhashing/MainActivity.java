@@ -12,10 +12,12 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.ArrayList;
 
@@ -59,9 +61,35 @@ public class MainActivity extends AppCompatActivity {
 
 
         Toast.makeText(getApplicationContext(),"not successful ",Toast.LENGTH_LONG).show();
-        
+
          */
-        recyclerView = findViewById(R.id.recyclerView);
+
+        String data = "";
+        StringBuffer sbuffer = new StringBuffer();
+        InputStream is = null;
+        try {
+            is = getAssets().open("BengaliDictionary_17.txt");
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        int i=0;
+        if(is != null) {
+            try {
+                while ((data = reader.readLine()) != null) {
+                    sbuffer.append(data + "\n");
+                    i++;
+                    if(i>10) break;
+                    is.close();
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.print(sbuffer);
+                Toast.makeText(getApplicationContext(),"not successful "+sbuffer,Toast.LENGTH_LONG).show();
+                recyclerView = findViewById(R.id.recyclerView);
         MyAdapter myAdapter = new MyAdapter(this,s1,s2);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager((this)));
