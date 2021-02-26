@@ -77,7 +77,14 @@ public class MainActivity extends AppCompatActivity {
         if(is != null) {
             try {
                 while ((data = reader.readLine()) != null) {
-                    sbuffer.append(data + "\n");
+
+                    data = data.substring(1,data.length());
+                    int wordStart = 0;
+                    int wordEnd = data.indexOf("|");
+                    String word = data.substring(wordStart,wordEnd);
+                    String banglaWord = data.substring(wordEnd+1,data.length());
+
+                    sbuffer.append(word + "\n"+banglaWord+"\n");
                     i++;
                     if(i>10) break;
                     is.close();
