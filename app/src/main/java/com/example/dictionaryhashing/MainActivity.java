@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     static ArrayList<String[]> hashTableBangla= new ArrayList<String[]>(101);
 
     EditText searcInput;
+    TextView searchOutput;
+    Button searchButton;
     String searchInput="";
     RecyclerView recyclerView;
     ArrayList<String> numberlist = new ArrayList<>();
@@ -69,14 +74,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         searcInput = (EditText) findViewById(R.id.searchInput);
-        searchInput = searcInput.getText().toString();
-        String output = "";
-        /*if(searchInput!="")
-        {
-            output = retrieve(searchInput);
-        }
+        searchOutput = (TextView) findViewById(R.id.searchOuput);
+        searchButton = (Button) findViewById(R.id.button);
 
-         */
+        searchButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                searchInput = searcInput.getText().toString();
+                String output = "";
+                if(searchInput!="")
+                {
+                    output = retrieve(searchInput);
+                    searchOutput.setText(output);
+                }
+            }
+        });
+
+
+
+
         //creating 2D array
         for(int i=0;i<m;i++)
         {
@@ -94,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+
+        // input from dataset
         String data = "";
         StringBuffer sbuffer = new StringBuffer();
         InputStream is = null;
@@ -131,6 +150,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("size = = = "+(s1.size()));
                 Toast.makeText(getApplicationContext()," successful "+sbuffer,Toast.LENGTH_LONG).show();
         */
+
+        //creating primary hash table
         Long testKey;
         int hashvalue;
         int total_wordcount=0;
@@ -209,6 +230,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
+        // showing to recycle view
                 recyclerView = findViewById(R.id.recyclerView);
 
         MyAdapter myAdapter = new MyAdapter(this,s1,s2);
@@ -217,53 +240,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager((this)));
 
 
-/*
-//create object of listview
-        ListView listView=(ListView)findViewById(R.id.listview);
 
-//create ArrayList of String
-        final ArrayList<String> arrayList=new ArrayList<>();
-
-//Add elements to arraylist
-        arrayList.add("android");
-        arrayList.add("is");
-        arrayList.add("great");
-        arrayList.add("and I love it");
-        arrayList.add("It");
-        arrayList.add("is");
-        arrayList.add("better");
-        arrayList.add("then");
-        arrayList.add("many");
-        arrayList.add("other");
-        arrayList.add("operating system.");
-        arrayList.add("android");
-        arrayList.add("is");
-        arrayList.add("great");
-        arrayList.add("and I love it");
-        arrayList.add("It");
-        arrayList.add("is");
-        arrayList.add("better");
-        arrayList.add("then");
-        arrayList.add("many");
-        arrayList.add("other");
-        arrayList.add("operating system.");
-
-//Create Adapter
-        ArrayAdapter arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
-
-//assign adapter to listview
-        listView.setAdapter(arrayAdapter);
-
-//add listener to listview
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this,"clicked item:"+i+" "+arrayList.get(i).toString(),Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        */
     }
+
+    // code used to build perfect hash
     private static void perfect_hashing() {
         for(int i=0;i<m;i++)
         {
@@ -341,6 +321,8 @@ public class MainActivity extends AppCompatActivity {
            */
 
     }
+
+    // finding perfect a, b for secondary hash table
     private static void find_perfect_ab(int i)
     {
         //findPerfectAB()
@@ -393,28 +375,34 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    // retrieving the string
     private static String retrieve(String word)
     {
         Long key = getAscii(word);
         int primaryHash = hash(primary_a,primary_b,key);
         //find secondary hash
-        String data = secondaryIndicesAB.get(primaryHash);
-        String a = data.substring(0,data.indexOf(" "));
-        String b = data.substring(data.indexOf(" ")+1,data.length());
-        int secondary_a = Integer.parseInt(a);
-        int secondary_b = Integer.parseInt(b);
-        if(a!="")
-        {
+        if(secondaryIndicesAB.contains(primaryHash)) {
+            String data = secondaryIndicesAB.get(primaryHash);
+            String a = data.substring(0, data.indexOf(" "));
+            String b = data.substring(data.indexOf(" ") + 1, data.length());
+            int secondary_a = Integer.parseInt(a);
+            int secondary_b = Integer.parseInt(b);
+            if (!a.equals("")) {
 
-            return hashTableBangla.get(primaryHash)[hash(secondary_a,secondary_b,key)];
+                return hashTableBangla.get(primaryHash)[hash(secondary_a, secondary_b, key)];
+            }
+            //find a,b for primary hash
+            else
+                return "not found";
         }
-        //find a,b for primary hash
         else
             return "not found";
 
 
     }
 
+    // calculate key value
     public static Long getAscii(String word)  {
         Long sum ;
         sum = Long.valueOf(0);
@@ -429,6 +417,7 @@ public class MainActivity extends AppCompatActivity {
         return sum;
     }
 
+    //calculate hash value 
     public static int hash(int a,int b,Long key)
     {
         int hash = (int) ((((a*key)+b)%prime)%m);
