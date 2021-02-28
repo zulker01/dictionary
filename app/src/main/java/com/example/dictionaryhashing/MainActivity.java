@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
     static  ArrayList<String> filtered_s2 = new ArrayList<>();
     static ArrayList<Long> key = new ArrayList<>();
     static ArrayList<Integer> keysForSearch = new ArrayList<>(); // hash indices to be searched
-
+    static ArrayList<Integer> secondaryIndices = new ArrayList<>();
+    static ArrayList<String> secondaryIndicesAB = new ArrayList<>();
     static ArrayList<ArrayList<Long> > x
             = new ArrayList<ArrayList<Long> >();
 
     static ArrayList<ArrayList<Long> > hashTable
             = new ArrayList<ArrayList<Long> >();
-    static ArrayList<Integer > banglaHashTable
-            = new ArrayList<Integer >();
+    static ArrayList<String[]> hashTableBangla= new ArrayList<String[]>(101);
 
     EditText searcInput;
     String searchInput="";
@@ -70,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
         searcInput = (EditText) findViewById(R.id.searchInput);
         searchInput = searcInput.getText().toString();
+        String output = "";
+        /*if(searchInput!="")
+        {
+            output = retrieve(searchInput);
+        }
+
+         */
         //creating 2D array
         for(int i=0;i<m;i++)
         {
@@ -148,50 +155,58 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        //find i for secondary hash
+        InputStream is1 = null;
+        try {
+            is1 = getAssets().open("perfectAB.txt");
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        BufferedReader reader1 = new BufferedReader(new InputStreamReader(is));
+
+        if(is1 != null) {
+            try {
+                while ((data = reader1.readLine()) != null) {
+
+                    int iStart = 0;
+                    String ini = data.substring(iStart,data.indexOf(" "));
+                    int init = Integer.parseInt(ini);
+                    secondaryIndices.add(init);
+                    data = data.substring(data.indexOf(" ")+1,data.length());
+                    secondaryIndicesAB.add(data);
+
+
+
+                    is.close();
+
+
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
         //build total hash table :
         for(int i=0;i<filtered_s1.size();i++)
         {
             String a="",b="";
             int secondary_a = 0,secondary_b=0;
-            test = s1.get(i);
+            test = filtered_s1.get(i);
             testKey = getAscii(test);
 
             hashvalue = hash(primary_a,primary_b,testKey);
             // find a,b for the hashvalue
-            InputStream is1 = null;
-            try {
-                is1 = getAssets().open("perfectAB.txt");
-            } catch (IOException exception) {
-                exception.printStackTrace();
-            }
-            BufferedReader reader1 = new BufferedReader(new InputStreamReader(is));
-
-            if(is1 != null) {
-                try {
-                    while ((data = reader1.readLine()) != null) {
-
-                        int iStart = 0;
-                        String ini = data.substring(iStart,data.indexOf(" "));
-                        int init = Integer.parseInt(ini);
-                        if(init==hashvalue) break;
-
-                        data = data.substring(data.indexOf(" ")+1,data.length());
-                         a = data.substring(iStart,data.indexOf(" "));
-                          b = data.substring(data.indexOf(" ")+1,data.length());
-                          secondary_a = Integer.parseInt(a);
-                          secondary_b = Integer.parseInt(b);
-                        is.close();
-
-
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
+            if(secondaryIndicesAB.contains(hashvalue)) {
+                data = secondaryIndicesAB.get(hashvalue);
+                a = data.substring(0, data.indexOf(" "));
+                b = data.substring(data.indexOf(" ") + 1, data.length());
+                secondary_a = Integer.parseInt(a);
+                secondary_b = Integer.parseInt(b);
+                if (a != "") {
+                    hashTable.get(hashvalue).add(hash(secondary_a, secondary_b, testKey), testKey);
+                    hashTableBangla.get(hashvalue)[hash(secondary_a, secondary_b, testKey)].equals(filtered_s2.get(i));
                 }
-            }
-            if(a!="")
-            {
-                hashTable.get(hashvalue).add(hash(secondary_a,secondary_b,testKey), testKey);
             }
         }
                 recyclerView = findViewById(R.id.recyclerView);
@@ -378,11 +393,25 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    private static void retrieve(String word)
+    private static String retrieve(String word)
     {
         Long key = getAscii(word);
         int primaryHash = hash(primary_a,primary_b,key);
+        //find secondary hash
+        String data = secondaryIndicesAB.get(primaryHash);
+        String a = data.substring(0,data.indexOf(" "));
+        String b = data.substring(data.indexOf(" ")+1,data.length());
+        int secondary_a = Integer.parseInt(a);
+        int secondary_b = Integer.parseInt(b);
+        if(a!="")
+        {
+
+            return hashTableBangla.get(primaryHash)[hash(secondary_a,secondary_b,key)];
+        }
         //find a,b for primary hash
+        else
+            return "not found";
+
 
     }
 
