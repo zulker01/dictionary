@@ -11,8 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 -->
+    <EditText
+        android:id="@+id/searchInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/searchOuput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Bangla"
+        android:inputType="textPersonName"
+        android:layout_below="@id/searchInput"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchOuput"/>
 </RelativeLayout>

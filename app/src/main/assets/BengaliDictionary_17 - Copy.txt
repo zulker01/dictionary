@@ -1,34 +1,13 @@
-|a|এক
-|a|ইংরেজী বর্ণমালার আদ্যাক্ষর
-|a|ইংরেজি বর্ণমালার প্রথম অক্ষর
+﻿|a|এক
 |aback|বিস্মিত
 |abandon|ত্যাগ করা
-|abbreviations|শব্দসংক্ষেপ
-|abdicate|অধিকার ত্যাগ করা
-|abduction|অপহরণ
 |abed|শয্যাগত
-|aberrant|বিপদগামী
-|aberration|আপাত বিচ্যুতি
-|abeyance|মুলতবি
-|abhor|ঘৃণাভরে পরিহার করা
-|abide|মেনে চলা
-|abnormally|অস্বাভাবিকভাবে
 |aboard|জাহাজের মধ্যে
 |abode|বসবাস করা
 |abolish|বাতিল
 |abolition|বিলোপ
 |abominable|জঘন্য
-|adjudicate|রায় দেওয়া
-|adjudication|বিচারকের রায়
-|adjudicator|বিচারক
-|adjunct|বিশেষণ
 |adjust|সমন্বয়সাধন
-|adjustable|সমন্বয়যোগ্য
-|admirer|গুনমুদ্ধ ব্যক্তি
-|admissible|গ্রহনীয়
-|admission|প্রবেশাধিকার
-|admit|স্বীকার করা
-|admittance|প্রবেশ
 |admitted|স্বীকৃত
 |admittedly|সর্বম্মতিক্রমে
 |ado|গোলমাল
@@ -47,10 +26,6 @@
 |agrarian|কৃষি
 |agree|সম্মত হওয়া
 |agree|সম্মত হওয়া
-|agreement|মতৈক্য
-|agricultural|কৃষিবিষয়ক
-|agriculture|কৃষি
-|ah|আহা
 |ahead|আগে
 |aid|সাহায্য
 |allocate|বরাদ্দ করা
@@ -64,38 +39,22 @@
 |allowed|অনুমোদিত
 |allows|অনুমোদন করে
 |alloy|সঙ্কর
-|alluring|লোভনীয়
-|allusions|পরোক্ষ উল্লেখ
-|ally|মৈত্রীবদ্ধ ব্যক্তি
-|almanac|পঞ্জিকা
 |almond|বাদাম
 |almost|প্রায়
 |aloft|ঊর্ধে
 |alone|একা
 |alone|একা
-|aloneness|একাকীত্ব
-|architecture|স্থাপত্য
-|archive|আর্কাইভ
 |archives|আর্কাইভ
 |area|অংশ
 |areas|এলাকা
 |argriculture|কৃষি
 |argue|যুক্তি দেখানো
 |argument|প্রেরিত মান
-|aristocracy|অভিজাততন্ত্র
-|aristocrat|অভিজাত ব্যক্তি
-|aristocratic|আভিজাত্যপূর্ণ
-|arithmetic|পাটিগণিত
 |arm|বাহু
 |armed|সশস্ত্র
 |armor|ঢাল
 |armored|বর্ম-আচ্ছাদিত
 |armpit|বগল
-|around|চারপাশ
-|automobile|মোটরগাড়ি
-|automobiles|মোটরগাড়ি
-|automotive|যন্ত্রচালিত
-|autonomous|স্বশাসিত
 |autonomy|স্বশাসন
 |autopsy|শবদেহ পরীক্ষা
 |aware|সচেতন
@@ -110,17 +69,7 @@
 |back|পিছনে
 |back|পিছনে
 |back|সমর্থন করা
-|back.pain|পশ্চাতে ব্যাথা
-|backbone|মেরুদন্ড
-|background|পটভূমি
-|blocks|ব্লক
-|blog|ব্লগ
 |blog|ব্লগিং করা
-|blogging|ব্লগিং
-|bloody|রক্তাক্ত
-|blooming|বিকশিত
-|blossom|প্রস্ফুটিত হওয়া
-|blowfish|ব্লোফিশ
 |blowing|প্রবাহিত
 |blowup|ফোলানো
 |blue|নীল
@@ -132,23 +81,14 @@
 |boom|আকস্মিক বৃদ্ধি পাওয়া
 |booming|সমৃদ্ধ
 |boon|অনুগ্রহ
-|boost|গতি বৃদ্ধি
-|booster|গতি বৃদ্ধিকারক
 |boot|বুট
 |border|সীমারেখা
-|boredom|একঘেঁয়েমি জনিত বিরক্তি
 |boring|বিরক্তিকর
 |born|জন্ম নেওয়া
 |borrow|ধার করা
 |borrower|ঋণগ্রহী
 |build|নির্মাণ করা
-|building|ভবন
-|building|গড়া
-|built|নির্মিত
-|builtin|অন্তর্নির্মিত
 |bulk|অধিকাংশ
-|bullet|বুলেট
-|bullfighter|বৃষের সঙ্গে লড়া
 |bunch|গুচ্ছ
 |bundle|আঁটি
 |buy|ক্রয় করা
@@ -164,13 +104,6 @@
 |cafe|রেস্তরাঁ
 |cage|খাঁচা
 |cake|কেক
-|calculable|গণনযোগ্য
-|calculate|গণনা
-|calculated|গণনাকৃত
-|calculating|গণনা করছে
-|calculation|গণনা
-|calculator|ক্যালকুলেটর
-|calculus|পাথুরি রোগ
 |calendar|বর্ষপঞ্জি
 |calibration|পরিমাপ নির্দিষ্ট-করণ
 |call|ডাক দেওয়া
@@ -196,10 +129,6 @@
 |chapters|পরিচ্ছেদ
 |char|অক্ষর
 |character|অক্ষর
-|characteristic|বৈশিষ্ট্য
-|characteristically|বৈশিষ্টময়ভাবে
-|characteristics|গুণাবলিসমূহ
-|characterization|বৈশিষ্ট্য
 |damned|অভিশপ্ত
 |dampness|আর্দ্রতা
 |damsel|তরুণী
@@ -210,11 +139,6 @@
 |dark|অন্ধকার
 |dark|আঁধার
 |darker|আরো অন্ধকার
-|darkest|অন্ধকারতম
-|darkness|আঁধার
-|darkroom|অন্ধকার ঘর
-|darling|প্রিয়তম
-|das|দাস
 |data|ডেটা
 |data|তথ্য
 |database|ডেটাবেস
@@ -222,19 +146,13 @@
 |date|তারিখ
 |dates|তারিখ
 |dating|ডেটিং
-|daughter|কন্যা
-|davenport|কারুকার্যপূর্ণ লেখার টেবিল
 |dawn|ভোর
 |day|দিন
-|daylight|দিনের আলো
-|daylong|দিনব্যাপী
 |days|দিন
 |daytime|দিবাভাগ
 |daytime|দিনের বেলা
 |dd|ডিডি
-|deactivated|অচল
 |dead|মৃত
-|deadlock|অচলবস্থা
 |deadly|মারাত্নক
 |deaf|বধির
 |deal|চুক্তি
@@ -248,8 +166,6 @@
 |dye|রং করা
 |dynamic|গতিশীল
 |dynamic|গতিময়
-|dynamically|চলন্ত অবস্থায়
-|dynamics|গতিবিদ্যা
 |dynastic|রাজবংশীয়
 |dynasties|রাজবংশ
 |dynasty|রাজবংশ
@@ -262,8 +178,6 @@
 |early|আগে
 |earn|আয় করা
 |earring|কানের দুল
-|earthbound|পৃথিবী অভিমুখী
-|earthly|সাংসারিক
 |earthquake|ভূকম্পন
 |easier|সহজতর
 |easily|সহজভাবে
@@ -274,12 +188,6 @@
 |easy|সহজ
 |eat|খাওয়া
 |eatable|খাদ্য
-|eccentricity|উত্‍কেন্দ্রতা
-|eclectic|সঙ্কীর্ণতামুক্ত
-|eclipse|গ্রহণ
-|ecliptic|ক্রান্তিবৃত্ত
-|economic|অর্থনৈতিক
-|economics|অর্থনীতি
 |economy|অর্থব্যবস্থা
 |edge|কিনারা
 |edible|খাদ্য
@@ -329,7 +237,6 @@
 |gains|লাভ
 |galaxy|ছায়াপথ
 |gallery|গ্যালারি
-|galloping|দ্রুতবেগে ধাবমান
 |game|খেলা
 |games|খেলা
 |gang|দল
@@ -368,7 +275,6 @@
 |gunman|বন্দুকধারী
 |gunmen|বন্দুকধারী
 |guy|লোক
-|gypsum|ক্যালসিয়াম সালফেটের একটি খনিজ পদার্থ
 |habit|অভ্যাস
 |habits|অভ্যাস
 |hail|অভিনন্দন জানান
@@ -377,7 +283,6 @@
 |hairpiece|টুপি
 |hell|দোযখ
 |hell|নরক
-|hellfire|দোযখের আগুন
 |hello|শুনুন
 |hello|ওহে
 |help|সহায়ক তথ্য
@@ -387,24 +292,14 @@
 |hepatitis|হেপাটাইটিস
 |hepatitis|হেপাটাইটিস
 |her|তার
-|herald|আগমনবার্তা ঘোষণা করা
-|herbal|ভেষজ
 |herd|পশুর দল
 |here|এখানে
 |heritage|ঐতিহ্য
 |hero|নায়ক
 |heroic|বীরোচিত
-|heroically|বীরত্বপূর্ণভাবে
-|heroine|নায়িকা
 |heroism|বীরত্ব
 |hesitate|ইতস্ততঃ করা
-|hey|ওহে
-|hibernate|জড়ভাবে শীত কাটানো
 |hiccup|হিচকি
-|horse|ঘোড়া
-|horseman|অশ্বারোহী
-|hospitality|আতিথেয়তা
-|host|হোস্ট
 |host|আমন্ত্রক
 |hostage|পণবন্দী
 |hostess|অতিথিসেবক
@@ -417,9 +312,6 @@
 |hours|ঘন্টা
 |house|আশ্রয় দেওয়া
 |houseboat|ভাসমান বাড়ি
-|household|ঘরোয়া
-|housekeeping|গৃহপরিচর্যা
-|housewife|গৃহবধূ
 |how|কেমন
 |however|তাহলেও
 |howl|গর্জন করা
@@ -434,3 +326,113 @@
 |human.rights|মানবাধিকার
 |humane|মানবিক
 |humanitarian|মানবিক
+|ice|বরফ
+|icebox|বরফের বাক্স
+|icon|আইকন
+|icons|আইকনস্
+|icy|বরফ-শীতল
+|idea|ধারনা
+|ideal|আদর্শ
+|idealism|ভাববাদ
+|ideally|আদর্শভাবে
+|identical|অনুরূপ
+|identity|পরিচয়
+|idle|অলস
+|idol|প্রতিমা
+|idolize|আরাদ্ধ বস্তুতে পরিণত করা, দেবতা জ্ঞানে পুজা করা
+|if|যদি
+|ignorance|অবহেলা
+|ignore|উপেক্ষা
+|ignoring|উপেক্ষা করছে
+|ill|অসুস্থ
+|ill|অসুস্থ
+|illegal|বেআইনি
+|illness|অসুস্থতা
+|illusion|মরীচিকা
+|image|চিত্র
+|image|ছবি
+|images|চিত্র
+|irrigate|জল সেচ করা
+|irritate|জ্বালাতন করা
+|island|দ্বীপ
+|islands|দ্বীপপুঞ্জ
+|isocyanate|আইসো-সায়ানেট
+|isolated|বিচ্ছিন্ন
+|issue|বিষয়
+|issue|প্রচার করা
+|it|এটা
+|italics|ইটালিক
+|itch|চুলকানো
+|itchy|চুলকায় এমন
+|item|পদ
+|items|পদগুলো
+|items|বস্তু
+|its|তার
+|jacket|জ্যাকেট
+|jagged|অসমতল ভুমি, খাঁজ কাটা
+|jail|জেল
+|jail|কারারুদ্ধ করা
+|jam|ঠাসাঠাসি করা
+|jar|জার
+|java|জাভা
+|jaw|চোয়াল
+|jawbone|চোয়াল
+|jealousy|জ্বলন
+|jellyfish|জেলিফিশ
+|jest|পরিহাস
+|jetty|জাহাজঘাটা
+|jewel|রত্ন
+|jeweler|জহুরী
+|jinx|অপয়া
+|kiosk|কিয়স্ক
+|kiss|চুম্বন
+|kiss|চুম্বন করা
+|kit|কিট
+|kitchen|রান্নাঘর
+|kite|ঘুড়ি
+|know|জানা
+|know|জানা
+|knowledge|জ্ঞান
+|known|পরিচিত
+|known|জ্ঞাত
+|knows|জানে
+|la|লা
+|lab|গবেষণাগার
+|label|লেবেল
+|labels|লেবেল
+|labor|শ্রম
+|laborer|শ্রমিক
+|labour|শ্রম
+|lack|অভাব
+|lack|অভাব
+|lacquer|সোনালী বার্নিশ
+|lad|কিশোর
+|ladder|মই
+|lake|হ্রদ
+|lamb|ভেড়া
+|lamp|দীপ
+|land|জমি
+|wart|জডুল
+|z|ইংরেজি বর্ণমালার ষড়বিংশ বর্ণ
+|warrant|হুকুমনামা
+|vow|শপথ
+|vow|অঙ্গীকার
+|waggish|রঙ্গপ্রিয়
+|vulgar|অভদ্র
+|wax-candle|মোমবাতি
+|wire|ধাতুর তার
+|wire|টেলিগ্রাম
+|waggery|ফক্কুড়ি
+|visual|দৃষ্টিগোচর
+|visual|দর্শন সংক্রান্ত
+|women|নারী
+|wicked|দুষ্ট
+|wizard|ঐন্দ্রজালিকা
+|wave|ঢেউ
+|yclept|অভিহিত
+|virgo|কন্যারাশি
+|wimple|সন্ন্যাসিনীর ঘোমটাবিশেষ
+|woo|প্রেমপ্রার্থনা করা
+|wail|বিলাপ
+|warmth|মৃদুতাপ
+|warmth|আন্তরিকতা

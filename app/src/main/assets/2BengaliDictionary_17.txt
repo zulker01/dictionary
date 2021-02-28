@@ -1,0 +1,39 @@
+﻿|huddle|গাদাগাদী করে থাকা
+|la|লা
+|lab|গবেষণাগার
+|label|লেবেল
+|labels|লেবেল
+|labor|শ্রম
+|laborer|শ্রমিক
+|labour|শ্রম
+|lack|অভাব
+|lacquer|সোনালী বার্নিশ
+|lad|কিশোর
+|ladder|মই
+|lake|হ্রদ
+|lamb|ভেড়া
+|lamp|দীপ
+|land|জমি
+|wart|জডুল
+|z|ইংরেজি বর্ণমালার ষড়বিংশ বর্ণ
+|warrant|হুকুমনামা
+|vow|শপথ
+|waggish|রঙ্গপ্রিয়
+|vulgar|অভদ্র
+|wax-candle|মোমবাতি
+|wire|ধাতুর তার
+|wire|টেলিগ্রাম
+|waggery|ফক্কুড়ি
+|visual|দৃষ্টিগোচর
+|visual|দর্শন সংক্রান্ত
+|women|নারী
+|wicked|দুষ্ট
+|wizard|ঐন্দ্রজালিকা
+|wave|ঢেউ
+|yclept|অভিহিত
+|virgo|কন্যারাশি
+|wimple|সন্ন্যাসিনীর ঘোমটাবিশেষ
+|woo|প্রেমপ্রার্থনা করা
+|wail|বিলাপ
+|warmth|মৃদুতাপ
+|warmth|আন্তরিকতা

@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,11 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
+public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
 
 
     ArrayList<String> data1 = new ArrayList<>();
     ArrayList<String> data2 = new ArrayList<>();
+    ArrayList<String> data1copy = new ArrayList<>();
+    ArrayList<String> data2copy = new ArrayList<>();
     Context context;
     public MyAdapter(Context ct,ArrayList<String>  s1, ArrayList<String>  s2)
     {
@@ -52,4 +56,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
             meaning = itemView.findViewById(R.id.meaning);
         }
     }
+    /*
+    @Override
+    public Filter getFilter(){
+        return data1;
+    }
+
+     */
 }
